@@ -1,19 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import HomeScreen from "./pages/HomeScreen";
-import AboutScreen from "./pages/AboutScreen";
-import ErrorScreen from "./pages/ErrorScreen";
+
+import LogIn from "./pages/LogIn";
+import RoutesApp from "./routes/RoutesApp";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/about" element={<AboutScreen />} />
-          <Route path="*" element={<ErrorScreen />} />
+          <Route path="/*" element={<RoutesApp />} />
+          <Route path="/login" element={<LogIn />} />
         </Routes>
       </BrowserRouter>
     </>
