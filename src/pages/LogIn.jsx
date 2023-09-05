@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //useNavigate = navegar entre paginas
 import { useNavigate } from "react-router-dom";
 
-const LogIn = () => {
+const LogIn = ({ cambiarLogIn }) => {
   //variable para el useNavigate
   const navigate = useNavigate();
 
@@ -60,6 +60,7 @@ const LogIn = () => {
 
     //Validacion del usuario
     if (email === user.email && password === user.password) {
+      cambiarLogIn();
       navigate("/");
     } else {
       alert("Email o password incorrectos");

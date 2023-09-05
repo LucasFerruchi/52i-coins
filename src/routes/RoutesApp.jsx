@@ -5,10 +5,10 @@ import AboutScreen from "../pages/AboutScreen";
 import ErrorScreen from "../pages/ErrorScreen";
 import NavBar from "../components/NavBar";
 
-const RoutesApp = () => {
+const RoutesApp = ({ cambiarLogIn }) => {
   return (
     <>
-      <NavBar />
+      <NavBar cambiarLogIn={cambiarLogIn} />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/about" element={<AboutScreen />} />
